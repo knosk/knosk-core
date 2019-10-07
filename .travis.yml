@@ -1,0 +1,13 @@
+language: python
+
+matrix:
+  include:
+    - python: 3.6
+      dist: trusty
+      sudo: false
+    - python: 3.7
+      dist: xenial
+      sudo: true
+
+install: python scripts/travis/build.py
+script: python scripts/travis/run-tests.py
